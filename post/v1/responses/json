@@ -1,0 +1,107 @@
+{
+  "model": "gpt-5.4-mini",
+  "input": [
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "input_text",
+          "text": "Alo"
+        }
+      ]
+    }
+  ],
+  "text": {
+    "format": {
+      "type": "text"
+    },
+    "verbosity": "medium"
+  },
+  "reasoning": {
+    "effort": "medium",
+    "mode": "standard",
+    "summary": "auto"
+  },
+  "tools": [
+    {
+      "type": "function",
+      "name": "get_opencode_project_info",
+      "description": "Retrieve information and installation instructions for the OpenCode open-source AI coding assistant in multiple languages and platforms.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "type": "string",
+            "description": "Preferred language for instructions or documentation. Example: 'English', 'Tiếng Việt', 'Deutsch'."
+          },
+          "platform": {
+            "type": "string",
+            "description": "Target platform or operating system for installation. Example: 'macOS', 'Windows', 'Linux', 'Arch Linux', or package manager name."
+          },
+          "include_desktop": {
+            "type": "boolean",
+            "description": "Whether to include instructions or download links for the desktop application."
+          }
+        },
+        "required": [
+          "language",
+          "platform",
+          "include_desktop"
+        ],
+        "additionalProperties": false
+      },
+      "strict": true
+    },
+    {
+      "type": "web_search_preview",
+      "user_location": {
+        "type": "approximate",
+        "country": "VN"
+      },
+      "search_context_size": "medium"
+    },
+    {
+      "type": "image_generation",
+      "model": "gpt-image-1",
+      "size": "auto",
+      "quality": "high",
+      "output_format": "jpeg",
+      "background": "opaque",
+      "moderation": "auto",
+      "partial_images": 3
+    },
+    {
+      "type": "mcp",
+      "server_label": "deepwiki",
+      "server_url": "https://mcp.deepwiki.com/mcp",
+      "allowed_tools": [
+        "ask_question",
+        "read_wiki_contents",
+        "read_wiki_structure"
+      ],
+      "require_approval": "always"
+    },
+    {
+      "type": "custom",
+      "name": "clrkis-bot-tools",
+      "description": "Tự động hoá",
+      "format": {
+        "type": "text"
+      }
+    },
+    {
+      "type": "apply_patch"
+    },
+    {
+      "type": "shell",
+      "environment": {
+        "type": "local"
+      }
+    }
+  ],
+  "store": true,
+  "include": [
+    "reasoning.encrypted_content",
+    "web_search_call.action.sources"
+  ]
+}
