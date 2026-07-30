@@ -126,4 +126,4 @@ Nếu bạn đang làm việc trên một dự án liên quan đến OpenCode v�
 
 ---
 
-**Tham gia cộng đồng của chúng tôi** [Discord](https://discord.gg/opencode) | [X.com](https://x.com/opencode)
+**Tham gia cộng đồng của chúng tôi** [Discord](https://discord.gg/opencode) | [X.com](https://x.com/opencode)# Test CodeRabbit
