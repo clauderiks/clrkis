@@ -1,117 +1,306 @@
-AGENTS.md
+# AGENTS.md
 
-ClaudeRiks AI Collaboration Protocol
+# ClaudeRiks AI Collaboration Standard v1.0
 
-Mục tiêu
-
-Repository này được thiết kế để nhiều AI cùng cộng tác phát triển phần mềm.
-
-Mọi AI tham gia đều phải tuân thủ tài liệu này.
+> Tài liệu bắt buộc đối với mọi AI Agent tham gia dự án ClaudeRiks.
 
 ---
 
-Ngôn ngữ
+# 1. MỤC TIÊU
 
-BẮT BUỘC sử dụng TIẾNG VIỆT khi:
+ClaudeRiks không phải là một repository thông thường.
+
+Đây là một hệ sinh thái nơi nhiều AI cùng cộng tác phát triển phần mềm.
+
+Mục tiêu:
+
+- Nhiều AI cùng phân tích.
+- Nhiều AI cùng Review.
+- Nhiều AI cùng Debate.
+- Nhiều AI cùng sinh Patch.
+- Chủ dự án là người quyết định cuối cùng.
+
+---
+
+# 2. AI ĐƯỢC PHÉP THAM GIA
+
+Bao gồm nhưng không giới hạn:
+
+- OpenAI Codex
+- Claude
+- Gemini
+- OpenRouter
+- Ollama
+- Qwen
+- DeepSeek
+- Kimi
+- Grok
+- Cursor
+- Copilot
+- Windsurf
+- Continue
+- Cline
+
+Mọi AI đều phải tuân thủ tài liệu này.
+
+---
+
+# 3. NGÔN NGỮ
+
+BẮT BUỘC:
+
+100% Tiếng Việt.
+
+Áp dụng cho:
 
 - Thảo luận
-- Review Code
+- Review
+- Pull Request
+- Commit Description
 - Giải thích
+- Nhật ký
 - Báo cáo
-- Bình luận Pull Request
-- Nhật ký làm việc
-- Tài liệu kỹ thuật
+- Đánh giá
+
+Không được sử dụng ngôn ngữ khác nếu không được yêu cầu.
 
 ---
 
-Bắt buộc đọc trước khi làm việc
+# 4. BẮT BUỘC ĐỌC
 
-AI phải đọc đầy đủ:
+Trước khi AI được phép sửa bất kỳ dòng code nào.
 
-- README.md
-- ROADMAP.md
-- PROGRESS.md
-- TODO.md
-- CHANGELOG.md
-- Toàn bộ thư mục docs/
+AI PHẢI ĐỌC:
 
-Nếu chưa đọc đầy đủ thì không được phép sửa mã nguồn.
+README.md
 
----
+ROADMAP.md
 
-Quy trình
+PROGRESS.md
 
-1. Đọc tài liệu.
-2. Phân tích mã nguồn.
-3. Thảo luận với các AI khác.
-4. Đạt đồng thuận.
-5. Sinh Patch.
-6. Tạo Branch.
-7. Commit.
-8. Tạo Pull Request.
-9. Chờ chủ dự án phê duyệt.
+TODO.md
 
----
+CHANGELOG.md
 
-Branch
+AGENTS.md
 
-Không AI nào được commit trực tiếp vào main.
+CLAUDE.md
 
-Mỗi nhiệm vụ phải có branch riêng.
+docs/*
+
+logs/*
+
+Nếu chưa đọc.
+
+=> KHÔNG ĐƯỢC PHÉP VIẾT CODE.
 
 ---
 
-Pull Request
+# 5. TRIẾT LÝ
 
-Mỗi Pull Request phải có:
+AI không phải người quyết định.
 
-- Mục tiêu
-- Danh sách thay đổi
-- Đánh giá rủi ro
-- Kết quả review
-- Ý kiến của các AI
+AI chỉ là người tư vấn.
+
+Con người là người quyết định cuối cùng.
 
 ---
 
-AI Review
+# 6. AI ORCHESTRATOR
 
-Mỗi AI phải ghi rõ:
+Repository luôn có một AI điều phối.
 
-- Vấn đề phát hiện
-- Giải pháp
-- Ưu điểm
-- Nhược điểm
-- Mức độ tin cậy
+Nhiệm vụ:
 
----
+- chia task
+- gom review
+- tạo báo cáo
+- phát hiện xung đột
+- yêu cầu AI tranh luận
+- tạo consensus
+- tạo patch
 
-Đồng thuận
-
-Nếu các AI chưa thống nhất thì tiếp tục thảo luận.
-
-Không được tạo Pull Request khi chưa đạt đồng thuận.
+AI điều phối KHÔNG ĐƯỢC sửa code.
 
 ---
 
-Chủ dự án
+# 7. AI DEBATE
 
-Chủ dự án là người quyết định cuối cùng.
+Nếu nhiều AI có ý kiến khác nhau.
 
-Không AI nào được tự Merge.
+Bắt buộc Debate.
+
+Quy trình:
+
+Vòng 1
+
+AI A
+
+↓
+
+AI B
+
+↓
+
+AI C
+
+↓
+
+AI D
+
+↓
+
+Consensus
+
+Nếu chưa thống nhất.
+
+Tiếp tục Debate.
+
+Không được tạo Pull Request.
 
 ---
 
-Sau mỗi Task
+# 8. REVIEW
 
-AI phải cập nhật:
+Mỗi AI phải ghi:
 
-- PROGRESS.md
-- TODO.md
-- CHANGELOG.md
-- logs/YYYY-MM-DD.md
+Vấn đề
+
+Nguyên nhân
+
+Giải pháp
+
+Ưu điểm
+
+Nhược điểm
+
+Độ tin cậy
+
+Ảnh hưởng
+
+Đánh giá rủi ro
 
 ---
 
-Mục tiêu
+# 9. BRANCH
 
-ClaudeRiks IDE hướng đến một hệ thống AI Orchestrator có khả năng điều phối nhiều AI cùng phát triển phần mềm với quy trình thống nhất, minh bạch và có sự phê duyệt của con người.
+Cấm commit vào:
+
+main
+
+master
+
+release
+
+Mỗi task:
+
+Một branch.
+
+Ví dụ:
+
+feature/dashboard
+
+feature/editor
+
+feature/api
+
+fix/login
+
+hotfix/cache
+
+---
+
+# 10. COMMIT
+
+Commit phải rõ ràng.
+
+Ví dụ:
+
+feat(editor): thêm Monaco Editor
+
+fix(auth): sửa xác thực GitHub
+
+docs(ai): cập nhật quy trình AI Debate
+
+refactor(core): tối ưu module Orchestrator
+
+---
+
+# 11. PULL REQUEST
+
+Mọi PR phải có:
+
+## Mục tiêu
+
+## Phạm vi
+
+## File thay đổi
+
+## Review
+
+## Kết quả AI
+
+## Consensus
+
+## Rủi ro
+
+## Đề xuất Merge
+
+---
+
+# 12. MERGE
+
+Không AI nào được Merge.
+
+Chỉ Chủ dự án.
+
+---
+
+# 13. CẬP NHẬT TÀI LIỆU
+
+Sau mỗi Task.
+
+Bắt buộc cập nhật:
+
+PROGRESS.md
+
+TODO.md
+
+CHANGELOG.md
+
+logs/YYYY-MM-DD.md
+
+---
+
+# 14. CẤM
+
+Không đoán.
+
+Không xóa file khi chưa được phép.
+
+Không sửa tài liệu khi chưa đọc.
+
+Không tự Merge.
+
+Không Push Force.
+
+Không bỏ qua Review.
+
+Không bỏ qua Debate.
+
+---
+
+# 15. MỤC TIÊU DỰ ÁN
+
+ClaudeRiks IDE hướng đến:
+
+- AI Orchestrator
+- Multi AI Collaboration
+- GitHub Automation
+- Review Automation
+- Patch Automation
+- PR Automation
+- Documentation First
+- Human Approval First
+
+Mọi AI phải tuân thủ tuyệt đối tài liệu này.
